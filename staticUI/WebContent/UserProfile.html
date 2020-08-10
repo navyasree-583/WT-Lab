@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ul {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+body {
+  background-image: url('https://www.ritutorial.org/wp-content/uploads/2017/05/6359710849660308841915989596_Odyssey.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="UserProfile.css"/>
+<title>Profile</title>
+
+</head>
+<body  style="background-color:lightblue;">
+
+<nav>
+<ul>
+ 
+  <li><a class="active" href="Home.html">Home</a></li>
+  <li> <a href="Register.html">Register</a></li>
+  <li><a href="Login.html">LogIn</a></li>
+  <li><a>Profile</a></li>
+  <li><a href="Catalog.html">Books Catalog</a></li>
+  <li><a href="ShoppingCart.html">Cart</a></li>
+  <li><a href="Payment.html">Payment</a></li>
+  <li><a href="Order.html">Order Confirmation</a></li>
+</ul>
+</nav>
+
+
+<h2>Profile</h2><br>
+<div class="profile">    
+<form id="profile" method="post" action="Catalog.html" >
+<lable><b>User Name
+</b>
+</lable>
+<input type="text" name="Uname" id="Uname" placeholder="UserName">    
+<br><br> 
+<lable><b>Address
+</b>
+</lable>
+<br>
+<input type="text" name="address" id="address" placeholder="Address">    
+<br><br> 
+<lable><b>Contact
+</b>
+</lable>
+<br>
+<input type="number" name="phno" id="phno" placeholder="Contact Number">   
+<br><br>
+<lable><b>LoginId
+</b>
+</lable>
+<br>
+<input type="text" name="loginid" id="loginid" placeholder="Login Id">   
+<br><br>
+<lable><b>Password
+</b>
+</lable>
+<input type="password" name="Pass" id="Pass" placeholder="Password">   
+<br><br>
+<!-- <input type="button" name="Submit" id="Submit" value="SUBMIT" >  -->
+
+<button class="button button1">Submit</button>
+<br>
+<br>
+<!--  <input type="button" name="reset" id="reset" value="RESET" >  -->
+<button class="button button1">Reset</button>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ul {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+body {
+  background-image: url('https://www.ritutorial.org/wp-content/uploads/2017/05/6359710849660308841915989596_Odyssey.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+
+<title>Payment</title>
+<link rel="stylesheet" type="text/css" href="Payment.css"/>
+</head>
+<body style="background-color:lightblue;">
+
+<nav>
+<ul>
+ 
+  <li><a class="active" href="Home.html">Home</a></li>
+  <li><a href="Register.html">Register</a></li>
+  <li><a href="Login.html">LogIn</a></li>
+  <li><a href="UserProfile.html">Profile</a></li>
+  <li><a href="Catalog.html">Books Catalog</a></li>
+  <li><a href="ShoppingCart.html">Cart</a></li>
+  <li><a>Payment</a></li>
+  <li><a href="Order.html">Order Confirmation</a></li>
+</ul>
+</nav>
+
+
+<h2>Payment</h2><br>  
+<div class="payment">
+<form id="payment" method="post" action="Order.html" >
+
+<lable><b>Credit Card Number
+</b>
+</lable>
+<br>
+<input type="number" name="card" id="card" placeholder="Credit card number">    
+<br><br> 
+
+<lable><b>Amount
+</b>
+</lable>
+<br>
+<input type="number" name="Amt" id="Amt" placeholder="Amount">    
+<br><br> 
+
+
+
+<!-- <input type="submit" name="ok" id="ok" value="Submit" > -->
+<button class="button button1">Submit</button>
+<br><br>
+<!-- <input type="submit" name="clear" id="clear" value="Clear" > -->
+<button class="button button1">Clear</button>
+</form>
+</div>
+
+</body>
+</html>
