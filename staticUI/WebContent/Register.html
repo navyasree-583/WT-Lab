@@ -4,8 +4,75 @@
 <meta charset="ISO-8859-1">
 <title>Register Form</title>
 <link rel="stylesheet" type="text/css" href="register.css"/>
+ 
+<script type="text/javascript">
 
-<style>
+function validmail(mail){
+	var reg= /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	
+	 var numbers = /^[0-9]+$/;
+	
+	 if(reg.test(mail.value)==false ){
+		  alert("Invalid mail Address");
+		  return false;
+		  }
+ 
+	   
+}
+
+ function Formvalid(){
+	 
+	 var numbers = /^[0-9]+$/;
+	 var mail=document.forms["myform"]["Gmail"].value;
+	 var pass=document.forms["myform"]["Pass"].value;
+	 var cpass=document.forms["myform"]["cPass"].value;
+	 var uname = document.forms["myform"]["Uname"].value;
+	// var reg= /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	 
+	  if(uname=="" ){
+		  alert("please fill the user name");
+		  return false;
+	  }
+      else if(uname.match(numbers)){
+
+        alert("username should not be number");
+        return false;
+      }
+	  else if(uname.length<4 ){
+		  alert("Invalid user name !");
+		  return false;
+	  }
+	  <!-- mail validation  -->
+	 
+	   else if(mail==""){
+			  alert("please fill the email");
+			 return false; 
+		  } 
+	  <!-- password validation -->
+	  else if(pass==""){
+		  alert("please enter the password");
+		  return false;
+		  }
+	  else if(pass.length<6){
+		  alert("your password should contain minimum 6 characters");
+		  return false;
+	  }
+	  <!--confirm password validation -->
+	  else if(cpass==""){
+		  alert("please fill the confirm password");
+		  return false;
+		  }
+	  else if(!(cpass==pass)){
+		  alert(" confirm password doesn't match with password");
+		  return false;
+	  }
+	
+}
+	
+
+   </script>
+   
+  <style>
 ul {
   list-style-type: none;
   margin: 0;
@@ -44,8 +111,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-}
-</style>
+}  
+</style> 
 
 </head>
 
@@ -65,51 +132,37 @@ body {
 </nav>
 <h2>Registration Page</h2><br>    
     <div class="register">    
-    <form id="register" method="post" action="Login.html" >    
-        <label><b>User Name     
+    <form id="register" name="myform" method="post"  action="Login.html" onsubmit="return Formvalid()">    
+        <label ><b>User Name     
         </b>    
         </label>    
-        <input type="text" name="Uname" id="Uname" placeholder="User name">    
+        <input type="text" name="uname1"   placeholder="User name"  id="Uname" >    
         <br><br>      
         
-        <lable><b>Email
+        <lable ><b>Email
         <br>
         </b> 
         </lable>  
-         <input type="text" name="Gmail" id="Gmail" placeholder="Email Id">    
+         <input type="mail" name="mail1" placeholder="Email Id"   id="Gmail" onblur="validmail(this)"   >    
         <br><br>       
-        <label><b>Password     
+        <label ><b>Password     
         </b>    
-        </label>    
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        </label >    
+        <input type="Password" name="pass1"  placeholder="Password"  id="Pass">    
         <br><br>    
-        <label><b>Confirm Password     
+        <label ><b>Confirm Password     
         </b>    
         </label>    
-        <input type="Password" name="Pass" id="Pass" placeholder="Confirm Password">
+        <input type="Password" name="cpass1"  placeholder="Confirm Password" id="cPass">
         <br><br>
-        <input type="radio" name="gender" value="male"> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-
-        
- 
-        <br>
-        <label><b>Address    
-        </b>    
-        </label> 
-        <br>    
-       <!-- <input type="text" name="address" id="address" placeholder="Address"> -->
-       <textarea name="address" id="address" rows=5 cols=19>
-       </textarea>
-        <br><br>  
+         
        <!-- <input type="button" name="register" id="register" value="SignUp" >  -->
-         <button class="button button1">SignIn</button>   
+         <button type = "submit" class="button button1">Register</button>   
         
-             
+         <!--   class="button button1" -->
     </form>     
 </div> 
-<br>
-<br>  
+  
 
 </body>
 </html>

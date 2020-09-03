@@ -29,12 +29,12 @@ body
   background-color: #4CAF50; /* Green */
   color: white;
 }
-.button1 {width: 120px;
-          height: 50px;
+.button1 {width: 60px;
+          height: 18px;
           }
            
 .catalog{  
-        width: 382px;  
+        width: 800px;  
         overflow: hidden;  
         margin: auto;  
         margin: 20 0 0 450px;  
@@ -52,13 +52,7 @@ label{
     color: #000000;  
     font-size: 17px;  
 }  
-#loginid{  
-    width: 300px;  
-    height: 30px;  
-    border: none;  
-    border-radius: 3px;  
-    padding-left: 8px;  
-}  
+
 #title{  
     width: 300px;  
     height: 30px;  
@@ -83,7 +77,7 @@ label{
     padding-left: 8px;  
       
 }  
-#date{  
+#dateString{  
     width: 300px;  
     height: 30px;  
     border: none;  

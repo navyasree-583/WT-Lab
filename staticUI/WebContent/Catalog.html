@@ -49,6 +49,11 @@ body {
 <title>Books Catalog</title>
 <link rel="stylesheet" type="text/css" href="catalog.css"/>
 
+<script type="text/javascript">
+ 
+  	  
+   </script>
+
 </head>
 <body style="background-color:lightblue;">
 
@@ -69,64 +74,119 @@ body {
 
 <h2>Books Catalog</h2><br>  
 <div class="catalog">
-<form id="catalog" method="post" action="ShoppingCart.html" >
+<form  id="catalog" method="post" action="ShoppingCart.html" >
+<center>
+<table border=1>
 <tr>
-<lable><b>Title of the book
-</b>
-</lable>
-<br>
-  <!--  <input type="text" name="title" id="title" placeholder="Title of the book">  -->
- <td>
-<select >
-<optgroup label="select the book" >
-<option value="C&Ds">Basics of C&Ds
-<option value="C++">The complete reference : C++
-<option value="Java">The complete reference : Java
-<option value="C">Head first C
-<option value="Ms SQL Server">Ms SQL Server
-<option value="MySql">The complete reference :MySql
-</optgroup>
-</select>
-</td></tr>
+<th> Book Preview </th>
+<th> Book Details </th>
+<th> Price </th>
+<th> Add to Cart</th>
+</tr>
+ <tr>
+  <td> <img src="https://images-na.ssl-images-amazon.com/images/I/51gOcNM4yDL._SX366_BO1,204,203,200_.jpg" width=120 height=120>
+       </img>
+  </td>
+  <td>
+  <pre>
+        <font face="comic sans ms" size=4 color="green" >
+        book:Data Structures
+        Author: Seymour Lipschutz 
+        Publisher:Wiesley
+        </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.500 &nbsp; </td>
+<td> &nbsp; &nbsp;
+      <a  class="button button1" href="shoppingcart.html">ADD TO CART</a>
+      &nbsp; &nbsp;
+ </td>
+</tr>
 <tr>
-<br>
-<br>
-<lable><b>Login Id
-</b>
-</lable>
-<br>
-<input type="text" name="loginid" id="loginid" placeholder="Login Id">    
-<br>
-<br> 
-<lable><b>Quantity
-</b>
-</lable>
-<br>
-<input type="number" name="nobooks" id="nobooks" placeholder="Number of books">    
-<br><br> 
-<lable><b>Cost of book
-</b>
-</lable>
-<br>
-<input type="number" name="cofbook" id="cofbook" placeholder="Amount">    
-<br><br> 
+  <td> <img src="https://images-na.ssl-images-amazon.com/images/I/71jYU3e7QJL.jpg" width=120 height=120>
+       </img>
+  </td>
+<td>
+  <pre>
+       <font face="comic sans ms" size=4 color="green" >
+        book:Java 2
+        Author:Watson
+        Publisher:BPB publications
+       </font>
+  </pre>
+  </td>
+<td>&nbsp; Rs.500 &nbsp;</td>
+<td> &nbsp; &nbsp; 
+     
+      <a class="button button1"  href="shoppingcart.html">ADD TO CART</a>
+       &nbsp; &nbsp;
+ </td>
+</tr>
 
-<lable><b>Date
-</b>
-</lable>
-<br>
-<input type="number" name="date" id="date" placeholder="Date">    
-<br><br>
+<tr>
+  <td> <img src="https://sc02.alicdn.com/kf/HTB1bkYGKFXXXXXpXVXXq6xXFXXXw.jpg_350x350.jpg" width=120 height=120>
+       </img>
+  </td>
+<td>
+  <pre>
+       <font face="comic sans ms" size=4 color="green" >
+        book:JDBMS
+        Author:Suresh Fatehpuria
+        Publisher:SB publications
+       </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.500 &nbsp;</td>
+<td> &nbsp; &nbsp; 
+     
+       <a class="button button1"  href="ShoppingCart.html">ADD TO CART</a>
+       &nbsp; &nbsp;
+ </td>
+</tr>
+<tr>
+  <td> <img src="https://hackr.io/blog/uploads/images/1570190912ltg5aslB77.jpg" width=120 height=120>
+       </img>
+  </td>
+  <td>
+  <pre>
+        <font face="comic sans ms" size=4 color="green" >
+        book:C Programming
+        Author: Greg Perry and Dean Miller 
+        Publisher:Prentice Hall
+        </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.500 &nbsp; </td>
+<td> &nbsp; &nbsp;
+      <a  class="button button1" href="shoppingcart.html">ADD TO CART</a>
+      &nbsp; &nbsp;
+ </td>
+</tr>
 
-<!-- <input type="submit" name="ok" id="ok" value="Submit" > -->
-<button class="button button1">ok</button>
-<br><br>
-
-<!-- <input type="submit" name="clear" id="clear" value="Clear" > -->
-<button class="button button1">clear</button>
+<tr>
+  <td> <img src="https://hackr.io/blog/uploads/images/1570190912YPNllQOLfu.jpg" width=120 height=120>
+       </img>
+  </td>
+  <td>
+  <pre>
+        <font face="comic sans ms" size=4 color="green" >
+        book:C++ Programming language
+        Author: Bjarne Stroustrup
+        Publisher:Addison wesley
+        </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.500 &nbsp; </td>
+<td> &nbsp; &nbsp;
+      <a  class="button button1" href="shoppingcart.html">ADD TO CART</a>
+      &nbsp; &nbsp;
+ </td>
+</tr>
+</table> </center>
 </form>
 <br>
-
+<br>
+<br>
 </div>
 </body>
 </html>

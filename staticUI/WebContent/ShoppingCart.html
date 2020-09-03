@@ -4,6 +4,53 @@
 <head><title>shopping cart</title>
 <link rel="stylesheet" type="text/css" href="Scart.css"/>
 
+<script type="text/javascript">
+function formvalid(){
+	 
+	var numbers = /^[0-9]+$/;
+	var quan = document.getElementById("q").value;
+	var costofbook = document.getElementById("cofbook").value;
+	
+	
+	var total=(500*quan)+100; 
+	
+
+    if (document.getElementById("drop").value == "")  
+     {  
+         alert("Please select a book form DropDownList");  
+          return false;   
+     }     
+		  	  
+	  else if(quan==" "){
+		  alert("please enter the Quantity");
+		  return false;
+	  }
+	    
+	  else if(costofbook=="" || costofbook==null){
+		  alert("please enter the cost");
+		  return false;
+	  }
+	  else if(!(costofbook.match(numbers))){
+		  alert("please enter cost in numbers");
+		  return false;
+	  }
+	
+	  else if(!(total==costofbook)){
+		  alert("please enter the  cost including shipping charges");
+		  return false;
+	  }
+	  else if (document.getElementById("dateString").value == "")  
+    {  
+        alert("Please select the date !");  
+         return false;   
+    }  
+  	
+ 
+
+} 
+  
+</script>
+
 <style>
 ul {
   list-style-type: none;
@@ -69,47 +116,57 @@ body {
 Shopping Cart</h1></center>
 <br><br><br><br><br>
 <div class="cart">
-<form id="cart" method="post" action="Payment.html" >
-<table align="center">
-<tr>
+<form id="cart" method="post" name="myform" action="Payment.html" onsubmit="return formvalid()" >
+<!-- <table align="center"> -->
 <lable>
 <td><b>Text Books</b></td>
 </lable>
 <br>
-<br>
+<tr>
 <td>
-<select >
-<optgroup label="select the book" >
-<option value="C&Ds">C&Ds
+<select id="drop" name="types"  >
+<optgroup label="select a book" >
+<option value="">
+<option value="Ds">Data structures
 <option value="C++">C++
-<option value="Java">Java
+<option value="Java">Java 2
 <option value="Oracle">C 
-<option value="Ms SQL Server">Ms SQL Server
-<option value="MySql">MySql
+<option value="Dbms">JDbms
 </optgroup>
 </select>
 </td></tr>
-
-<tr>
-<lable>
-<td>
-<b>Quantity</b></td>
+</table>
+<br>
+<br>
+<lable><b>Quantity
+</b>
 </lable>
 <br>
-<td>
-<input type="text" id="q">
-</td></tr>
-<tr>
-<td></td>
-<td>
+<input type="number" name="quan" id="q" placeholder="Quantity" min="1" max="10" required>
+<br><br>
 
-<!-- <input type="submit" value=ok /> -->
-<button class="button button1">ok</button>
+<lable><b>Date
+</b>
+</lable>
+<br>
+<input type="date" name="dat" id="dateString" placeholder="Date" >    
+<br><br>
 
-</td></tr>
-</table>
+<lable><b>Cost of book
+</b>
+</lable>
+<br>
+<input type="text" name="costofbook" id="cofbook"  placeholder="Amount"  >    
+<br><br> 
+
+
+
+ <!-- <input type="submit" value=ok />  -->
+ <button class="button button1">Checkout</button> 
+
+
 <center>
-<pre>Cost of one book is"500" + shipping "100"</pre>
+<pre>Cost of one book is "500" + shipping "100"</pre>
 </center>
 </div>
 </form>

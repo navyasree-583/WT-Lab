@@ -51,12 +51,12 @@ label{
     color: #000000;  
     font-size: 17px;  
 }  
-#loginid{  
+#Gmail{  
     width: 300px;  
     height: 30px;  
     border: none;  
     border-radius: 3px;  
-    padding-left: 8px;  
+    padding-left: 8px; 
 }  
 #Pass{  
     width: 300px;  
@@ -79,7 +79,7 @@ label{
 span{  
     color: white;  
     font-size: 17px;
-    color: #000000;  
+    color: #0000ff;  
 }  
 a{  
     float: right;  

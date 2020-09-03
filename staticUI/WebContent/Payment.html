@@ -48,6 +48,78 @@ body {
 
 <title>Payment</title>
 <link rel="stylesheet" type="text/css" href="Payment.css"/>
+<script type="text/javascript">
+function validform(){
+	 var name = document.forms["myform"]["name1"].value;;
+	 var cardno = document.forms["myform"]["card"].value;
+	 var amount = document.forms["myform"]["Amt"].value;
+	 var w=document.forms["myform"]["year"].value;
+	 var v=document.forms["myform"]["cvv"].value;
+	 var numbers = /^[0-9]+$/;
+	 <!-- user name validation -->
+	 if(name==""){
+		 alert("please enter name which is on the card");
+		 return false;
+	 }
+	 else if(name.match(numbers)){
+		 alert("Invalid name!");
+		 return false;
+	 }
+	 <!-- card number validation -->
+	 else if (cardno == "") {
+		    alert("enter the card number");
+		    return false;
+		  }
+	 else  if(cardno.length<16){
+			  alert("Please enter 16 digits");
+			  return false;   
+		  }
+	 else if(!(cardno.match(numbers))){
+			 alert("Please enter in numbers !");
+			 return false;
+		 }
+	 
+	 <!-- amount validation -->
+	 else if (amount == "") {
+		    alert("please enter the amount");
+		    return false;
+		   
+		  }
+	 else if(!(amount.match(numbers))){
+		  alert("enter the amount in numbers");
+		  return false;
+	  }
+	  <!-- year validation -->
+	 else if (w == "") {
+		    alert("please enter the year");
+		    return false;
+		  }
+	 else if(!(w.match(numbers))){
+		 alert("Year shouldn't be a letter");
+		 return false;
+		 
+	 }
+	 else if(!(w.length==4)){
+		 alert("Year must be 4 digits");
+		 return false;
+	 }
+	  <!-- cvv validation -->
+	 else if (v == "") {
+		    alert("please enter the Cvv ");
+		    return false; 
+		  }
+	 else if(!(v.match(numbers))){
+		 alert("Cvv shouldn't be a letter");
+		 return false;	
+	 }
+	 else if(!(v.length==3)){
+		 alert("Cvv must be 3 digits");
+		 return false;
+	 }
+}
+
+  
+</script>
 </head>
 <body style="background-color:lightblue;">
 
@@ -68,21 +140,41 @@ body {
 
 <h2>Payment</h2><br>  
 <div class="payment">
-<form id="payment" method="post" action="Order.html" >
-
+<form id="payment" method="post"  name="myform" action="Order.html" onsubmit="return validform()" >
+<lable><b>Name on Credit Card
+</b>
+</lable>
+<br>
+<input type="text" name="name" id="name1" placeholder="Name on credit card " >    
+<br><br> 
 <lable><b>Credit Card Number
 </b>
 </lable>
 <br>
-<input type="number" name="card" id="card" placeholder="Credit card number">    
+<input type="text" name="cardno" id="card" placeholder="Credit card number" >    
 <br><br> 
+
+<lable><b>Expiry year
+</b>
+</lable>
+<br>
+<input type="text" name="w" id="year" placeholder="Year" >    
+<br><br>
+
+<lable><b>Cvv
+</b>
+</lable>
+<br>
+<input type="text" name="w" id="cvv" placeholder="Cvv" >    
+<br><br>
 
 <lable><b>Amount
 </b>
 </lable>
 <br>
-<input type="number" name="Amt" id="Amt" placeholder="Amount">    
+<input type="text" name="Amount" id="Amt" placeholder="Amount" >    
 <br><br> 
+
 
 
 
@@ -90,7 +182,7 @@ body {
 <button class="button button1">Submit</button>
 <br><br>
 <!-- <input type="submit" name="clear" id="clear" value="Clear" > -->
-<button class="button button1">Clear</button>
+
 </form>
 </div>
 

@@ -1,3 +1,4 @@
+
 @CHARSET "ISO-8859-1";
 body  
 {  
@@ -75,14 +76,15 @@ label{
       
 }  
 
-#address{  
-    width: 200px;  
-    height: 100px;  
+#cPass{  
+    width: 300px;  
+    height: 30px;  
     border: none;  
     border-radius: 3px;  
     padding-left: 8px;  
       
-}  
+} 
+
  <!-- #log{  
     width: 300px;  
     height: 30px;  

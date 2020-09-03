@@ -6,7 +6,46 @@
   
 <title>Login Form</title>
 <link rel="stylesheet" type="text/css" href="Login.css"/>
+<script type="text/javascript">
 
+function formvalid(){
+var mail=document.forms["myform"]["Gmail"].value;
+var pass=document.forms["myform"]["Pass"].value;
+if(mail=="" ||  pass==""){
+	  alert("please fill all the fields ");
+	  return false;
+}
+
+}
+function validemail(mail){
+    	  var reg= /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/; 
+    	  if((mail.value)==""){
+    		  alert("please fill the email");
+    		 return false; 
+    	  }
+    	  else if(reg.test(mail.value)==false ){
+    		  alert("Invalid mail Address");
+    		  return false;
+    		  }
+    	  return true;
+}
+function validpass(){
+    		   	  
+    	  var pass=document.getElementById("Pass").value;
+    	  if(pass==""){
+    		  alert("please fill the password");
+    		  
+    		  }
+    	  
+    	  else if(pass.length<6){
+    		  alert("your password should contain minimum 6 characters");
+    		 
+    	  }
+}
+    	  
+    	  
+    	  
+   </script>
 <style>
 ul {
   list-style-type: none;
@@ -56,8 +95,8 @@ body {
 <ul>
  
   <li><a class="active" href="Home.html">Home</a></li>
-  <li><a>LogIn</a></li>
   <li> <a href="Register.html">Register</a></li>
+  <li><a>LogIn</a></li>
   <li><a href="UserProfile.html">Profile</a></li>
   <li><a href="Catalog.html">Books Catalog</a></li>
   <li><a href="ShoppingCart.html">Cart</a></li>
@@ -67,17 +106,17 @@ body {
 </nav>
 <h2>Login Page</h2><br>    
     <div class="login">    
-    <form id="login" method="post" action="UserProfile.html" >    
-        <label><b>Login Id    
+    <form id="login" name="myform" method="post" action="UserProfile.html" onsubmit="return formvalid()" >    
+        <label><b>Email    
         </b>    
         </label>
         <br>    
-        <input type="text" name="loginid" id="loginid" placeholder="Login Id">    
+        <input type="text" name="mail" id="Gmail" placeholder="Mail Id" onblur="validemail(this)">    
         <br><br>    
         <label><b>Password     
         </b>    
         </label>    
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <input type="Password" name="pass" id="Pass" placeholder="Password" onblur="validpass()">    
         <br><br>    
         <!-- <input type="button" name="log" id="log" value="Log In Here" color="green"> -->
         <button class="button button1">LogIn</button>
@@ -86,7 +125,7 @@ body {
         <input type="checkbox" id="check">    
         <span>Remember me</span>    
         <br><br>    
-         <a href="#">Forgot Password?</a>    
+         <a href="#" >Forgot Password?</a>    
     </form>     
 </div>   
 <br>
