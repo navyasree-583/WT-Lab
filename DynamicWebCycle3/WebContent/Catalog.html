@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+ul {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+body {
+  background-image: url('https://www.ritutorial.org/wp-content/uploads/2017/05/6359710849660308841915989596_Odyssey.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+
+
+<meta charset="ISO-8859-1">
+<title>Books Catalog</title>
+<link rel="stylesheet" type="text/css" href="catalog.css"/>
+
+<script type="text/javascript">
+ 
+  	  
+   </script>
+
+</head>
+<body style="background-color:lightblue;">
+
+<nav>
+<ul>
+ 
+  <li><a class="active"  href="Home.html">Home</a></li>
+  <li> <a href="Register.html">Register</a></li>
+  <li><a href="Login.html">LogIn</a></li>  
+  <li><a href="UserProfile.html">Profile</a></li>
+  <li><a>Books Catalog</a></li>
+  <li><a href="ShoppingCart.html">Cart</a></li>
+  <li><a href="Payment.html">Payment</a></li>
+  <li><a href="Order.html">Order Confirmation</a></li>
+</ul>
+</nav>
+
+
+<h2>Books Catalog</h2><br>  
+<div class="catalog">
+<form  id="catalog" method="post" action="CartServlet" >
+<center>
+<table border=1>
+<tr>
+<th> Book Preview </th>
+<th> Book Details </th>
+<th> Price </th>
+<th> Add to Cart</th>
+</tr>
+ <tr>
+  <td> <img src="https://images-na.ssl-images-amazon.com/images/I/51gOcNM4yDL._SX366_BO1,204,203,200_.jpg" width=120 height=120>
+       </img>
+  </td>
+  <td>
+  <pre>
+        <font face="comic sans ms" size=4 color="green" >
+        book:Data Structures
+        Author: Seymour Lipschutz 
+        Publisher:Wiesley
+        </font>
+  </pre>
+  </td>
+   <td>&nbsp;Rs.500 &nbsp; </td> 
+<td> &nbsp; &nbsp;
+     <input type="checkbox" id="myCheck" name="test" value="500">
+      &nbsp; &nbsp;
+ </td>
+</tr>
+<tr>
+  <td> <img src="https://images-na.ssl-images-amazon.com/images/I/71jYU3e7QJL.jpg" width=120 height=120>
+       </img>
+  </td>
+<td>
+  <pre>
+       <font face="comic sans ms" size=4 color="green" >
+        book:Java 2
+        Author:Watson
+        Publisher:BPB publications
+       </font>
+  </pre>
+  </td>
+<td>&nbsp; Rs.500 &nbsp;</td>
+<td> &nbsp; &nbsp; 
+     <input type="checkbox" id="myCheck" name="test" value="500">
+      
+       &nbsp; &nbsp;
+ </td>
+</tr>
+
+<tr>
+  <td> <img src="https://sc02.alicdn.com/kf/HTB1bkYGKFXXXXXpXVXXq6xXFXXXw.jpg_350x350.jpg" width=120 height=120>
+       </img>
+  </td>
+<td>
+  <pre>
+       <font face="comic sans ms" size=4 color="green" >
+        book:JDBMS
+        Author:Suresh Fatehpuria
+        Publisher:SB publications
+       </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.450 &nbsp;</td>
+<td> &nbsp; &nbsp; 
+
+     <input type="checkbox" id="myCheck" name="test" value="450">
+      
+     
+       
+ </td>
+</tr>
+<tr>
+  <td> <img src="https://hackr.io/blog/uploads/images/1570190912ltg5aslB77.jpg" width=120 height=120>
+       </img>
+  </td>
+  <td>
+  <pre>
+        <font face="comic sans ms" size=4 color="green" >
+        book:C Programming
+        Author: Greg Perry and Dean Miller 
+        Publisher:Prentice Hall
+        </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.500 &nbsp; </td>
+<td> &nbsp; &nbsp;
+       <input type="checkbox" id="myCheck" name="test" value="500">
+      &nbsp; &nbsp;
+ </td>
+</tr>
+
+<tr>
+  <td> <img src="https://hackr.io/blog/uploads/images/1570190912YPNllQOLfu.jpg" width=120 height=120>
+       </img>
+  </td>
+  <td>
+  <pre>
+        <font face="comic sans ms" size=4 color="green" >
+        book:C++ Programming language
+        Author: Bjarne Stroustrup
+        Publisher:Addison wesley
+        </font>
+  </pre>
+  </td>
+<td>&nbsp;Rs.450 &nbsp; </td>
+<td> &nbsp; &nbsp;
+       <input type="checkbox" id="myCheck" name="test" value="450">
+      &nbsp; &nbsp;
+ </td>
+</tr>
+</table> </center>
+<br>
+<center>
+<button  >ADD TO CART</button>
+</center>
+</form>
+<br>
+<br>
+<br>
+</div>
+</body>
+</html>
