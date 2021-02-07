@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user id="1">
+        <firstname>Peter</firstname>
+        
+        <lastname>Brown</lastname>
+        <occupation>programmer</occupation>
+    </user>
+    <user id="2">
+        <firstname>Martin</firstname>
+        <lastname>Smith</lastname>
+        <occupation>accountant</occupation>
+    </user>
+    <user id="3">
+        <firstname>Lucy</firstname>
+        <lastname>Gordon</lastname>
+        <occupation>teacher</occupation>
+    </user>
+    
+     <user id="4">
+        <firstname>Lacy</firstname>
+        <lastname>Riyan</lastname>
+        <occupation>designer</occupation>
+    </user>
+    
+     <user id="5">
+        <firstname>Park</firstname>
+        <lastname>Jimin</lastname>
+        <occupation>Artist</occupation>
+    </user>
+    
+     <user id="6">
+        <firstname>Jin</firstname>
+        <lastname>lona</lastname>
+        <occupation>Singer</occupation>
+    </user>
+    
+     <user id="7">
+        <firstname>Saba</firstname>
+        <lastname>Prem</lastname>
+        <occupation>teacher</occupation>
+    </user>
+    
+     <user id="8">
+        <firstname>Adhitya</firstname>
+        <lastname>Venkat</lastname>
+        <occupation>Dancer</occupation>
+    </user>
+    
+     <user id="9">
+        <firstname>Caroline</firstname>
+        <lastname>Luna</lastname>
+        <occupation>Architect</occupation>
+    </user>
+    
+     <user id="10">
+        <firstname>Varsha</firstname>
+        <lastname>lunavath</lastname>
+        <occupation>Graphic designer</occupation>
+    </user>
+</users>
